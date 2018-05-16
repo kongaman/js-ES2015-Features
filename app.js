@@ -54,6 +54,7 @@
 // console.log(gen.next().value);
 // console.log(gen.next().value);
 
+
 // ------------------------- Symbols ------------------------------
 
 // // Create a symbol
@@ -90,3 +91,51 @@
 // // Symbols are ignored by JSON.stringify
 // console.log(JSON.stringify({key: 'prop'}));
 // console.log(JSON.stringify({[Symbol('sym1')]: 'prop'}));
+
+
+// --------------------------- Destructuring -----------------------
+
+// // Destructuring Assignment
+// let a, b;
+// [a, b] = [100, 200];
+// console.log(a);
+// console.log(b);
+
+// // Rest pattern
+// [a, b, ...rest] = [100, 200, 300, 400, 500];
+// console.log(rest);
+
+// ({ a, b, ...rest } = { a: 100, b: 200, c: 300, d: 400, e: 500 });
+// console.log(rest);
+
+// // Array destructuring
+// const people = ['John', 'Beth', 'Mike'];
+// const [person1, person2, person3] = people;
+// console.log(person1, person2, person3);
+
+// // Parse Array returned from function
+// function getPeople() {
+//     return ['Mick', 'Johan', 'Adam'];
+// }
+//  let person4, person5, person6;
+//  [person4, person5, person6] = getPeople();
+//  console.log(person4, person5, person6);
+
+//  // Object destructuring
+//  const person = {
+//      name: 'John Doe',
+//      age: 32,
+//      city: 'Miami',
+//      gender: 'male',
+//      sayHello: function(){ console.log('Hello!');}
+//  }
+
+// // Old ES 5
+// //  const  name = person.name,
+// //         age = person.age,
+// //         city = person.city;
+
+// // New ES 6 Destrructuring
+// const {name, age, city, sayHello} = person;
+// console.log(name, age, city);
+// sayHello();
